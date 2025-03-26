@@ -21,6 +21,10 @@ mod structs;
 mod unrecoverable_errors;
 mod use_keyword;
 mod variables;
+mod generics;
+mod traits;
+mod lifetimes;
+mod reading_files;
 
 /**
  * @author: Gayanuka Bulegoda
@@ -36,7 +40,7 @@ mod variables;
  */
 
 fn main() {
-    let module = "recoverable_errors";
+    let module = "reading_files";
 
     match module {
         "variables" => variables::variables_intro(),
@@ -61,6 +65,10 @@ fn main() {
         "hash_maps" => hash_maps::hash_maps_intro(),
         "unrecoverable_errors" => unrecoverable_errors::unrecoverable_errors_intro(),
         "recoverable_errors" => recoverable_errors::recoverable_errors_intro(),
+        "generics" => generics::generics_intro(),
+        "traits" => traits::traits_intro(),
+        "lifetimes" => lifetimes::lifetimes_intro(),
+        "reading_files" => reading_files::reading_files_intro(),
         _ => println!("Invalid module name"),
     }
 }
